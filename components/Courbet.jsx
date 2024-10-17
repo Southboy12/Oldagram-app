@@ -1,6 +1,9 @@
 import React from "react"
 import vangogh from "../src/avatar-vangogh.jpg"
 import postVangogh from "../src/post-vangogh.jpg"
+import heart from "../src/icon-heart.png"
+import share from "../src/icon-dm.png"
+import comment from "../src/icon-comment.png"
 
 
 export default function Courbet() {
@@ -18,14 +21,14 @@ export default function Courbet() {
                 <img src={postVangogh} className="post-image" alt="post image" />
             </section>
 
-            <section>
-                <div>
-                    <img src="#" alt="likes" />
-                    <img src="#" alt="comment" />
-                    <img src="#" alt="share" />
+            <section className="body">
+                <div className="icon-container">
+                    <img src={heart} className="icon" alt="likes" />
+                    <img src={comment} className="icon" alt="comment" />
+                    <img src={share} className="icon" alt="share" />
                 </div>
-                <h3>21,492 likes</h3>
-                <h3>vincey1853 just took a few mushrooms lol</h3>
+                <h3 className="likes">21,492 likes</h3>
+                <h3 className="username-caption">vincey1853 <span>just took a few mushrooms lol</span></h3>
             </section>
         
 
