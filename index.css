@@ -78,8 +78,7 @@ html, body {
     justify-content: space-between;
     width: 375px;
     height: 70px;
-    padding: 10px 0;
-    
+    padding: 20px 0;
 
 }
 
@@ -126,4 +125,8 @@ html, body {
     margin: 0;
 }
 
-
+.spacing {
+    width: 375px;
+    height: 15px;
+    background: rgba(128, 128, 128, 0.2)
+}

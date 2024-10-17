@@ -1,13 +1,14 @@
-import React from 'react'
-import Main from "./components/Courbet"
+import React, { useState } from 'react'
+import Courbet from "./components/Courbet"
 import Header from "./components/Head"
+import data from "./data"
 
 
-export default function App() {
+export default function App() {    
     return (
         <div className='container'>
             <Header />
-            <Main />
+            <Courbet />
         </div>
     )
 }
