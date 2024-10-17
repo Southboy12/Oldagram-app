@@ -98,6 +98,12 @@ html, body {
     height: 18.65px;
 }
 
+.icon:hover,
+.icon:focus {
+    width: 28px;
+    height: 23px;
+}
+
 .likes {
     box-sizing: border-box;
     width: 375px;
