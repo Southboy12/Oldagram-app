@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import vangogh from "../src/avatar-vangogh.jpg";
-import postVangogh from "../src/post-vangogh.jpg";
 import heart from "../src/icon-heart.png";
 import share from "../src/icon-dm.png";
 import comment from "../src/icon-comment.png";
@@ -8,6 +6,16 @@ import data from "../data.js";
 
 export default function Courbet() {
   const [userData, setUserData] = useState(data);
+
+  function handleLikes(username) {
+    setUserData((prevData) =>
+        prevData.map((user) =>
+            user.username === username
+            ? {...user, likes: user.likes + 1}
+            : user
+        )
+    )
+  }
 
   return (
     <div>
@@ -27,7 +35,7 @@ export default function Courbet() {
 
           <section className="body">
             <div className="icon-container">
-              <img src={heart} className="icon" alt="likes" />
+              <img src={heart} className="icon" onDoubleClick={() => handleLikes(user.username)} alt="likes" />
               <img src={comment} className="icon" alt="comment" />
               <img src={share} className="icon" alt="share" />
             </div>
